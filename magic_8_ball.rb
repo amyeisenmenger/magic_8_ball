@@ -38,7 +38,7 @@ def reset
 end
 
 def ask_question
-    puts 'Ask a question to get an answer or type QUIT to exit the program:'
+  puts 'Ask a question to get an answer or type QUIT to exit the program:'
     @question = gets.strip.downcase
 end
 
@@ -93,15 +93,18 @@ def magic_eight_ball
   end
 end
 
-# def input(*args)
-#   input = *args
-#   binding.pry
-#   case input
-#   when 'quit', 'add_answers', 'print_answers', 'reset_answers'
-#     @commands[input].call
-#   else
-#     magic_eight_ball
-#   end
-# end
 
-magic_eight_ball
+
+first_arg = ARGV[0].strip if ARGV[0]
+ARGV.clear
+if first_arg == 'add_answers'
+  reset
+  add_answers
+  magic_eight_ball
+else
+  magic_eight_ball
+end
+
+
+### put in optional input s othat add_answers can take in an arguement and the run it beyond that
+
