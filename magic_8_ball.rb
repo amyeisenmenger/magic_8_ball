@@ -33,7 +33,18 @@ def reset
   'Probably not...',
   'Unlikely',
   'Never!',
-  'Ask Google'
+  'You cannot, sir, take from me anything',
+  'Come, you are a tedious fool.',
+  'The opposite is also true.',
+  'Wear a monocle',
+  'Struggle is what it means to be alive and free.',
+  'Do not now look for the answers. They cannot now be given to you because you could not live them.',
+  'Ask Google',
+  'No one can advise and help you, no one.',
+  'There is no “answer,” no cognitive solution, to the questions that self-destructive people put.',
+  'Know when to quit and have a margarita.',
+  'Your brain is as dry as the remainder biscuit after a voyage.',
+  'The most infectious pestilence upon thee!'
 ]
 end
 
