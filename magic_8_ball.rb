@@ -91,7 +91,13 @@ end
 
 def magic_eight_ball
   greeting
+  first_arg = ARGV[0].strip if ARGV[0]
+  ARGV.clear
   reset
+  case first_arg
+  when 'quit', 'add_answers', 'print_answers', 'reset_answers'
+    @commands[first_arg].call
+  end
   @question = ''
   while @question != 'quit'
     ask_question
@@ -104,18 +110,4 @@ def magic_eight_ball
   end
 end
 
-
-
-first_arg = ARGV[0].strip if ARGV[0]
-ARGV.clear
-if first_arg == 'add_answers'
-  reset
-  add_answers
-  magic_eight_ball
-else
-  magic_eight_ball
-end
-
-
-### put in optional input s othat add_answers can take in an arguement and the run it beyond that
-
+magic_eight_ball
